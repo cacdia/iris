@@ -11,6 +11,7 @@ import { PauseCommand } from "./pause.ts";
 import { UnpauseCommand } from "./unpause.ts";
 import { GroupInfoCommand } from "./groupinfo.ts";
 import { CastigoCommand } from "./castigo.ts";
+import { PollCommand } from "./poll.ts";
 
 /**
  * Fábrica de comandos - cria instâncias dos comandos
@@ -26,5 +27,6 @@ export function createCommands(
     new UnpauseCommand(pauseService),
     new GroupInfoCommand(whatsappService),
     new CastigoCommand(whatsappService),
+    new PollCommand(),
   ];
 }
